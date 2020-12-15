@@ -148,7 +148,7 @@ You can use the extended toolbar configuration format to access additional optio
 
  * **`items`** &ndash; An array of toolbar item names. Most of the components (buttons, dropdowns, etc.) which can be used as toolbar items are described under the {@link features/index Features} tab. A full list is defined in {@link module:ui/componentfactory~ComponentFactory editor.ui.componentFactory} and can be listed using the following snippet: `Array.from( editor.ui.componentFactory.names() )`. More details could be found in the {@link framework/guides/creating-simple-plugin Creating a simple plugin} guide.
 
- * **`removeItems`** &ndash; An array of toolbar item names. With this setting you can modify the default toolbar items of a bundle without the need of recreating it from scratch. If, after removing an item, toolbar will have two or more consecutive separators (`'|'`), the duplicates will be removed automatically.
+ * **`removeItems`** &ndash; An array of toolbar item names. With this setting you can remove items without recreating the entire items array from scratch. It is especially useful when you want to remove a certain plugin from an editor build that has a predefined toolbar. Moreover, if after removing an item, the toolbar will have two or more consecutive separators (`'|'`), the duplicates will be removed automatically.
 
  * **`viewportTopOffset`** &ndash; The offset (in pixels) from the top of the viewport used when positioning a sticky toolbar. Useful when a page with which the editor is being integrated has some other sticky or fixed elements (e.g. the top menu). Thanks to setting the toolbar offset, the toolbar will not be positioned underneath or above the page's UI.
 
