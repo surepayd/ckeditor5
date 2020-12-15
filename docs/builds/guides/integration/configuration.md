@@ -138,12 +138,12 @@ ClassicEditor
 You can use the extended toolbar configuration format to access additional options:
 
 ```js
-    toolbar: {
-        items: [ 'bold', 'italic', '|', 'undo', 'redo', '-', 'numberedList', 'bulletedList' ],
-        removeItems: [ 'link' ],
-        viewportTopOffset: 30,
-        shouldNotGroupWhenFull: true
-    }
+	toolbar: {
+		items: [ 'bold', 'italic', '|', 'undo', 'redo', '-', 'numberedList', 'bulletedList' ],
+		removeItems: [ 'link' ],
+		viewportTopOffset: 30,
+		shouldNotGroupWhenFull: true
+	}
 ```
 
  * **`items`** &ndash; An array of toolbar item names. Most of the components (buttons, dropdowns, etc.) which can be used as toolbar items are described under the {@link features/index Features} tab. A full list is defined in {@link module:ui/componentfactory~ComponentFactory editor.ui.componentFactory} and can be listed using the following snippet: `Array.from( editor.ui.componentFactory.names() )`. More details could be found in the {@link framework/guides/creating-simple-plugin Creating a simple plugin} guide.
@@ -159,21 +159,21 @@ You can use the extended toolbar configuration format to access additional optio
 You can use `'|'` to create a separator between groups of toolbar items. Works in both config formats:
 
 ```js
-    toolbar: [ 'bold', 'italic', '|', 'undo', 'redo' ]
+	toolbar: [ 'bold', 'italic', '|', 'undo', 'redo' ]
 ```
 
 ```js
-    toolbar: {
-        items: [ 'bold', 'italic', '|', 'undo', 'redo' ]
-    }
+	toolbar: {
+		items: [ 'bold', 'italic', '|', 'undo', 'redo' ]
+	}
 ```
 
 It is also possible to arrange toolbar items into multiple lines. In the extended format set `shouldNotGroupWhenFull` option to `true`, so items will not be grouped when the toolbar overflows but will wrap to the new line instead. Additionally, a `'-'` could be used inside items list to set the breaking point explicitly.
 
 ```js
-    toolbar: {
-        items: [ 'bold', 'italic', '-', 'undo', 'redo' ]
-    }
+	toolbar: {
+		items: [ 'bold', 'italic', '-', 'undo', 'redo' ]
+	}
 ```
 
 <info-box hint>
