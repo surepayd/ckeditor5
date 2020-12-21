@@ -28,6 +28,9 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties'; // <--- ADDED
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties'; // <--- ADDED
+
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';     // <--- ADDED
 import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
@@ -63,6 +66,8 @@ ClassicEditor.builtinPlugins = [
 	Alignment,                                                            // <--- ADDED
 	ImageResizeEditing,                                                            // <--- ADDED
 	ImageResizeButtons,                                                            // <--- ADDED
+	TableProperties,                                                            // <--- ADDED
+	TableCellProperties,                                                            // <--- ADDED
 ];
 
 // Editor configuration.
@@ -123,9 +128,8 @@ ClassicEditor.defaultConfig = {
 	},
 	table: {
 		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
+			'tableColumn', 'tableRow', 'mergeTableCells',
+                'tableProperties', 'tableCellProperties'// <--- ADDED
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
