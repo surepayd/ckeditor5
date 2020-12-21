@@ -1,6 +1,6 @@
 {
   "name": "@surepayd/ckeditor5",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Surepayd customized version of ckeditor5",
   "main": "ckeditor.js",
   "scripts": {
