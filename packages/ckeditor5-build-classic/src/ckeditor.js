@@ -30,6 +30,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';     // <--- ADDED
+import ImageResizeEditing from '@ckeditor/ckeditor5-image/src/imageresize/imageresizeediting';
+import ImageResizeButtons from '@ckeditor/ckeditor5-image/src/imageresize/imageresizebuttons';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -58,7 +60,9 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Alignment                                                            // <--- ADDED
+	Alignment,                                                            // <--- ADDED
+	ImageResizeEditing,                                                            // <--- ADDED
+	ImageResizeButtons,                                                            // <--- ADDED
 ];
 
 // Editor configuration.
@@ -86,12 +90,36 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	image: {
+		styles: [
+		  'alignLeft', 'alignCenter', 'alignRight',  // <--- ADDED
+		],
 		toolbar: [
 			'imageStyle:full',
 			'imageStyle:side',
 			'|',
-			'imageTextAlternative'
-		]
+			'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',  // <--- ADDED
+			'|',
+			'imageResize',  // <--- ADDED
+			'|',
+			'imageTextAlternative',
+		],
+		resizeOptions: [
+			{
+			name: 'imageResize:original',
+			value: null,
+			icon: 'original',
+			},
+			{
+			name: 'imageResize:50',
+			value: '50',
+			icon: 'medium',
+			},
+			{
+			name: 'imageResize:75',
+			value: '75',
+			icon: 'large',
+			},
+		],
 	},
 	table: {
 		contentToolbar: [
