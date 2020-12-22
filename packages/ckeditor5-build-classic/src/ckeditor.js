@@ -115,13 +115,48 @@ ClassicEditor.defaultConfig = {
 			icon: 'original',
 			},
 			{
+			name: 'imageResize:10',
+			value: '10',
+			icon: 'medium',
+			},
+			{
+			name: 'imageResize:20',
+			value: '20',
+			icon: 'medium',
+			},
+			{
+			name: 'imageResize:30',
+			value: '30',
+			icon: 'medium',
+			},
+			{
+			name: 'imageResize:40',
+			value: '40',
+			icon: 'medium',
+			},
+			{
 			name: 'imageResize:50',
 			value: '50',
 			icon: 'medium',
 			},
 			{
-			name: 'imageResize:75',
-			value: '75',
+			name: 'imageResize:60',
+			value: '60',
+			icon: 'large',
+			},
+			{
+			name: 'imageResize:70',
+			value: '70',
+			icon: 'large',
+			},
+			{
+			name: 'imageResize:80',
+			value: '80',
+			icon: 'large',
+			},
+			{
+			name: 'imageResize:90',
+			value: '90',
 			icon: 'large',
 			},
 		],
